@@ -1,17 +1,13 @@
-import MainPage from './components/MainContent';
-import Header from './components/Header';
-import Filters from './components/Filters';
-import Footer from './components/Footer';
-
 import './styles/App.scss';
+import { BrowserRouter as Router } from 'react-router-dom';
+import MainPage from './components/MainPage';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Filters />
-      <MainPage />
-      <Footer />
+      <Router>
+        <MainPage />
+      </Router>
     </div>
   );
 }
