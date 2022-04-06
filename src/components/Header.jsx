@@ -1,5 +1,4 @@
 import React from 'react'
-import '../components/HeaderButtons'
 import HeaderButtons from '../components/HeaderButtons'
 import '../styles/Header.scss'
 
@@ -11,7 +10,7 @@ const Header = () => {
       <div className='header-title-main'>Такая себе пицца</div>
       <div className='header-title-small'>тут мелкий еле живой текст про пиццу</div>
       </div>
-      <div><HeaderButtons /></div>
+      <HeaderButtons />
     </div>
   )
 }
