@@ -99,6 +99,46 @@
         "price": 285,
         "category": 5,
         "rating": 7
+      },
+      {
+        "id": 10,
+        "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/89eae7cceb034829aee7f52803b4df30_292x292.jpeg",
+        "name": "Классическая",
+        "types": [0, 1],
+        "sizes": [26, 30, 40],
+        "price": 289,
+        "category": 5,
+        "rating": 7
+      },
+      {
+        "id": 11,
+        "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/772d900150264e119a86571b302a3651_292x292.jpeg",
+        "name": "Овощи и гриль",
+        "types": [0, 1],
+        "sizes": [26, 30, 40],
+        "price": 469,
+        "category": 5,
+        "rating": 7
+      }, 
+      {
+        "id": 12,
+        "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/257f9cb7b9ed4e72b6df2b1af3538312_292x292.jpeg",
+        "name": "Маргарита 🌱",
+        "types": [0, 1],
+        "sizes": [26, 30, 40],
+        "price": 369,
+        "category": 5,
+        "rating": 9
+      },
+      {
+        "id": 13,
+        "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/2ac448e39ba24623a33c1d8d50b69ef8_292x292.jpeg",
+        "name": "Диабло",
+        "types": [0, 1],
+        "sizes": [26, 30, 40],
+        "price": 469,
+        "category": 1,
+        "rating": 9
       }
     ]
   }

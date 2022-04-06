@@ -1,120 +1,175 @@
-.pizza-card {
+.pizza_card {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  width: 284px;
+
+  .pizza_card_text {
+    font-size: 17px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 5px;
+  }
+
+  .pizza_params {
+    background-color: #F3F3F3;
+    border-radius: 7px;
+    width: 280px;
+    height: 85px;
+  }
+
+  .pizza_type_group {
     display: flex;
-    flex-direction: column;
-    margin: auto;
-    margin-top: 2em;
+    text-align: center;
 
-    .pizza-card-text {
-        font-size: 17px;
-        font-weight: 700;
-        text-align: center;
-        margin-bottom: 15px;
-        margin-top: 5px;
-    }
+    .pizza_type {
+      border-radius: 7px;
+      text-transform: lowercase;
+      width: 50%;
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 5px;
+      margin-left: 4px;
+      margin-right: 4px;
+      margin-bottom: 1px;
+      padding-top: 7px;
+      padding-bottom: 9px;
+      transition: all .1s linear;
 
-    .pizza-params {
-        background-color: #e2e2e2;
+      &:hover {
+        cursor: pointer;
+        background-color: #cecece;
+        color: #2f2f2f;
+      }
+
+      &.disabled {
+        opacity: 0.1;
+        pointer-events: none;
+      }
+
+      &.active {
+        background-color: #ffffff;
+        color: #2f2f2f;
         border-radius: 7px;
-        width: 280px;
-        height: 85px;
+        text-transform: lowercase;
+        width: 50%;
+        font-size: 14px;
+        font-weight: 600;
+        margin-top: 5px;
+        margin-left: 4px;
+        margin-right: 4px;
+        margin-bottom: 1px;
+        padding-top: 7px;
+        padding-bottom: 9px;
+        transition: all .1s linear;
+      }
+    }
+  }
+
+  .size_type_group {
+    display: flex;
+    text-align: center;
+
+    .size_type {
+      border-radius: 5px;
+      text-transform: lowercase;
+      width: 35%;
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 4px;
+      margin-left: 4px;
+      margin-right: 4px;
+      padding-top: 7px;
+      padding-bottom: 9px;
+      transition: all .1s linear;
+
+      &:hover {
+        background-color: #cecece;
+        cursor: pointer;
+      }
+
+      &.disabled {
+        opacity: 0.1;
+        pointer-events: none;
+      }
+
+      &.active {
+        background-color: #ffffff;
+        color: #2f2f2f;
+        border-radius: 7px;
+        text-transform: lowercase;
+        width: 35%;
+        font-size: 14px;
+        font-weight: 600;
+        margin-top: 4px;
+        margin-left: 4px;
+        margin-right: 4px;
+        padding-top: 7px;
+        padding-bottom: 9px;
+        transition: all .1s linear;
+      }
     }
 
-    .pizza-type-group {
-        display: flex;
-        text-align: center;
-        .pizza-type {
-            border-radius: 7px;
-            text-transform: lowercase;
-            width: 50%;
-            font-size: 14px;
-            font-weight: 600;
-            margin-top: 5px;
-            margin-left: 4px;
-            margin-right: 4px;
-            margin-bottom: 1px;
-            padding-top: 7px;
-            padding-bottom: 9px;
-            transition: all .1s linear;
-
-            &:hover {
-                cursor: pointer;
-                background-color: #adadad;
-                color: #ffffff;
-            }
-
-            &.disabled {
-                opacity: 0.1;
-                pointer-events: none;
-            }
-        }
-
-        .pizza-type-active {
-            background-color: #242424;
-            color: #ffffff;
-            border-radius: 7px;
-            text-transform: lowercase;
-            width: 50%;
-            font-size: 14px;
-            font-weight: 600;
-            margin-top: 5px;
-            margin-left: 4px;
-            margin-right: 4px;
-            margin-bottom: 1px;
-            padding-top: 7px;
-            padding-bottom: 9px;
-            transition: all .1s linear;
-        }
-    }
-
-    .size-type-group {
-        display: flex;
-        text-align: center; 
-
-        .size-type {
-            border-radius: 5px;
-            text-transform: lowercase;
-            width: 35%;
-            font-size: 14px;
-            font-weight: 600;
-            margin-top: 4px;
-            margin-left: 4px;
-            margin-right: 4px;
-            padding-top: 7px;
-            padding-bottom: 9px;
-            transition: all .1s linear;
-
-            &:hover {
-                background-color: #f3f3f3;
-                cursor: pointer;
-            }
-
-            &.disabled {
-                opacity: 0.1;
-                pointer-events: none;
-            }
-        }
-
-        &.active {
-            background-color: #ffffff;
-            border-radius: 5px;
-            text-transform: lowercase;
-            width: 35%;
-            margin-top: 4px;
-            margin-left: 4px;
-            margin-right: 4px;
-            padding: 5px;
-            transition: all .1s linear;
-
-            &:hover {
-                background-color: #f3f3f3;
-                cursor: pointer;
-            }
-        }
-
-    }
+  }
 }
 
-.pizza-img>img {
-    width: 260px;
-    margin-left: 17px;
+.pizza_img>img {
+  width: 260px;
+  margin-left: 17px;
+}
+
+.price_buy_block {
+  display: flex;
+  margin-left: 7px;
+  margin-top: 20px;
+  margin-right: 1px;
+}
+
+.pizza_price {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.pizza_buy_button {
+  display: flex;
+  margin-left: auto;
+  margin-top: -10px;
+  margin-right: 3px;
+  justify-content: flex-end;
+  padding: 10px;
+  background-color: #ffffff;
+  border: solid 1px #fdb633;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all .1s linear;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #fdb633;
+    transition: all .1s linear;
+  }
+  
+  &:active {
+    background-color: #b17f22;
+  }
+
+  .buy_button_amount {
+    display: flex;
+    margin-left: 5px;
+    background-color: #242424;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 20px;
+    color: #fff;
+
+    &.hidden {
+      display: none;
+    }
+  }
 }
