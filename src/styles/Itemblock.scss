@@ -139,7 +139,7 @@
   display: flex;
   margin-left: auto;
   margin-top: -10px;
-  margin-right: 3px;
+  margin-right: 8px;
   justify-content: flex-end;
   padding: 10px;
   background-color: #ffffff;
@@ -171,5 +171,24 @@
     &.hidden {
       display: none;
     }
+  }
+}
+
+.pizza_clear_button {
+  display: flex;
+  flex-direction: row;
+
+  &:hover{
+    cursor: pointer;
+    z-index: 1;
+  }
+}
+
+.trash-bin {
+  margin: 0 auto;
+  margin-right: 8px;
+  transition: all .3s ease;
+  &:hover{
+    transform: scale(1.3);
   }
 }
