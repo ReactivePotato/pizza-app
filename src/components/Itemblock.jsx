@@ -3,19 +3,20 @@ import classNames from 'classnames'
 import propTypes from 'prop-types'
 import '../styles/Itemblock.scss'
 import { useDispatch, useSelector } from 'react-redux'
-import { addPizzaAction } from './redux/reducers/addPizzaReducer'
-import { removePizzaAction } from './redux/reducers/removePizzaReducer'
+import { addPizzaAction, clearPizzaAction } from './redux/reducers/pizzasInCartReducer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import { faTrash, faCartShopping } from '@fortawesome/free-solid-svg-icons'
 
 const Itemblock = ({ id, name, imageUrl, types, sizes, price }) => {
 
   const dispatch = useDispatch()
 
+  // pizza types 
   const pizzaTypes = ['тонкое', 'традиционное']
   const sizeTypes = [26, 30, 40]
 
-  const pizzasInCart = useSelector((it) => it.pizzasState)
+  //showed amount at pizza card
+  const pizzasInCart = useSelector((it) => it.pizzasInCartReducer)
 
   let pizzasAmount = 0
 
@@ -25,7 +26,7 @@ const Itemblock = ({ id, name, imageUrl, types, sizes, price }) => {
     }
   })
 
-
+  //pizza types states
   const [activeType, setActiveType] = useState(types[0])
   const [activeSize, setActiveSize] = useState(0)
 
@@ -37,12 +38,14 @@ const Itemblock = ({ id, name, imageUrl, types, sizes, price }) => {
     setActiveSize(index)
   }
 
+  //adding pizza
   const addPizza = (id) => {
     dispatch(addPizzaAction({ pizza_id: id, pizza_amount: 1 }))
   }
 
-  const removePizza = (id) => {
-    dispatch(removePizzaAction({ pizza_id: id, pizza_amount: 0}))
+  //removing all pizzas
+  const removeAllPizzas = (id) => {
+    dispatch(clearPizzaAction({ pizza_id: id, pizza_amount: 0 }))
   }
 
   return (
@@ -79,11 +82,12 @@ const Itemblock = ({ id, name, imageUrl, types, sizes, price }) => {
           от {price} ₽.
         </div>
         <div className='pizza_buy_button' onClick={() => addPizza(id)}>
-          <div>+ Добавить</div>
-          <div className='buy_button_amount'>{pizzasAmount}</div>
+          <div className='buy_button_text'>+ Добавить</div>
+          <div className='buy_button_cart_img'><FontAwesomeIcon icon={faCartShopping} /></div>
+          <div className='buy_button_amount_bg'><div className='buy_button_amount'>{pizzasAmount}</div></div>
         </div>
-        <div className="pizza_clear_button">
-            <div className='trash-bin' onClick={() => removePizza(id)}><FontAwesomeIcon icon={faTrash} /></div>
+        <div className="pizza_clear_button" onClick={() => removeAllPizzas(id)}>
+          <div className='trash-bin'><FontAwesomeIcon icon={faTrash} /></div>
         </div>
       </div>
     </div>

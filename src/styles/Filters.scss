@@ -24,12 +24,12 @@ sans-serif;
         transition: all .1s ease;
 
         &:hover {
-            background: #adadad;
+            background: #cecece;
             cursor: pointer;
         }
 
         &.active {
-            background-color: #242424;
+            background-color: #ff641c;
             color: #fff;
             transition: all .1s ease
         }
@@ -80,4 +80,9 @@ sans-serif;
 select {
     border: none;
     outline: none;
+    width: 70px;
+}
+
+.sort_value {
+
 }

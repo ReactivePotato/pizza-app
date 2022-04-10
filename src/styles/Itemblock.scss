@@ -5,6 +5,7 @@
   margin-top: 1em;
   margin-bottom: 2em;
   width: 284px;
+  user-select: none;
 
   .pizza_card_text {
     font-size: 17px;
@@ -136,47 +137,79 @@
 }
 
 .pizza_buy_button {
-  display: flex;
-  margin-left: auto;
+  position: absolute;
+  margin-left: 7.8em;
   margin-top: -10px;
   margin-right: 8px;
   justify-content: flex-end;
   padding: 10px;
+  width: 8.1em;
+  height: 1.4em;
   background-color: #ffffff;
   border: solid 1px #fdb633;
-  border-radius: 10px;
+  border-radius: 50px;
   font-size: 14px;
   font-weight: 600;
   transition: all .1s linear;
+  user-select: none;
 
   &:hover {
     cursor: pointer;
-    background-color: #fdb633;
+    background-color: #ff641c;
+    color: #ffffff;
     transition: all .1s linear;
   }
   
   &:active {
-    background-color: #b17f22;
+    background-color: #692a0c;
+  }
+
+  .buy_button_text {
+    position: absolute;
+    margin-right: 32px;
+  }
+
+  .buy_button_cart_img {
+    position: absolute;
+    margin-left: 5.7em;
+    height: 1em;
+    
+    .svg-inline--fa{
+      height: 1.5em;
+      z-index: -1;
+    }
+
+  }
+
+  .buy_button_amount_bg {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    background-color: #ff641c;
+    border: solid white 1px;
+    border-radius: 50px;
+    margin-left: 6.7em;
+    margin-top: .65em;
   }
 
   .buy_button_amount {
-    display: flex;
-    margin-left: 5px;
-    background-color: #242424;
-    padding-left: 7px;
-    padding-right: 7px;
-    border-radius: 20px;
-    color: #fff;
+    color: #ffffff;
+    font-size: 12px;
 
     &.hidden {
       display: none;
     }
   }
 }
-
 .pizza_clear_button {
-  display: flex;
+  position: absolute;
+  margin-left: 15.6em;
   flex-direction: row;
+
+  .svg-inline--fa{
+    margin-top: 1px;
+    height: 1.1em;
+  }
 
   &:hover{
     cursor: pointer;
@@ -185,10 +218,16 @@
 }
 
 .trash-bin {
-  margin: 0 auto;
-  margin-right: 8px;
-  transition: all .3s ease;
-  &:hover{
+  position: absolute;
+  margin-left: .2em;
+  transition: all .1s ease;
+  user-select: none;
+  &:hover {
     transform: scale(1.3);
+    color: #ff641c
+  }
+
+  &:active{
+    transform: rotate(30deg)
   }
 }

@@ -42,12 +42,13 @@ sans-serif;
    letter-spacing: 0em;
 }
 
-.header_titl_small {
+.header_title_small {
    font-size: .8em;
    text-transform: lowercase;
    font-family: $font-fam;
    margin-left: 2px;
    font-weight: 600;
+   opacity: 0.6;
 }
 
 .header_buttons {
@@ -57,12 +58,14 @@ sans-serif;
    margin-right: 1em;
    border-radius: 50px;
    padding: 7px;
-   background: #fdb633;
+   background: #ffffff;
+   color: #303030;
    width: 110px;
    height: 30px;
    justify-content: center;
    transition: all .1s ease;
    text-decoration: none;
+   border: solid #ff641c .5px;
 
    .header_btn_amount {
       margin-right: 5px;
@@ -70,18 +73,20 @@ sans-serif;
 
       font-family: $font-fam;
       font-weight: 500;
+      color: #303030
    }
 
    .header_btn_divider {
       border-left: solid 1px;
       margin-left: 5px;
       margin-right: 5px;
+      color: #303030;
    }
 
    .header_btn_cart {
       padding-top: 5px;
       padding-left: 8px;
-
+      color: #303030;
       transition: .1s ease;
 
       &:active {
@@ -92,15 +97,27 @@ sans-serif;
 
    &:hover {
       cursor: pointer;
-      background-color: #be8a28;
+      color: #ffffff;
+      background-color: #ff641c;
+
+      .header_btn_amount {
+         color: #ffffff;
+      }
+
+      .header_btn_divider {
+         color: #ffffff;
+      }
+
+      .header_btn_cart {
+         color: #ffffff;
+      }
    }
 
    &:visited {
-      color: #242424;
+      color: #ffffff;
    }
 
    &:active {
-      color: #ffffff;
-      background-color: #2f2f2f;
+      background-color: #692a0c;
    }
 }
