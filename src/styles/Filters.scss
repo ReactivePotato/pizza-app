@@ -22,6 +22,7 @@ sans-serif;
         max-height: 16px;
         text-transform: capitalize;
         transition: all .1s ease;
+        user-select: none;
 
         &:hover {
             background: #cecece;
@@ -57,7 +58,7 @@ sans-serif;
 .sort_type_select {
     display: flex;
     flex-direction: row;
-
+    user-select: none;
 }
 
 .sort_type_label {

@@ -11,9 +11,15 @@ const HeaderButtons = () => {
     return acc + rec.pizza_amount
   }, 0)
 
+  const currentPizzasPrice = useSelector((state) => state.pizzaCostReducer)
+
+  const totalPizzasPrice = currentPizzasPrice.reduce((acc, rec) => {
+    return acc + rec.pizza_cost
+  }, 0)
+
   return (
     <Link to="/cart" className='header_buttons'>
-      <div className='header_btn_amount'>100 ₽.</div>
+      <div className='header_btn_amount'>{totalPizzasPrice} ₽.</div>
       <div className='header_btn_divider'></div>
       <div className='header_btn_cart_img'><FontAwesomeIcon icon={faCartShopping} /></div>
       <div className='header_btn_incart_bg'></div>
