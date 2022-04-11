@@ -22,7 +22,7 @@ const pizzasInCart = (state = initialState, action) => {
             if (typeof foundedPizza !== 'undefined') {
                 return state.map((pizza) => {
                     if (pizza.pizza_id === action.payload.pizza_id) {
-                        return { ...pizza, pizza_amount: 0 }
+                        return { ...pizza, pizza_amount: action.payload.pizza_amount }
                     }
                     return pizza
                 })

@@ -4,7 +4,7 @@ import propTypes from 'prop-types'
 import '../styles/Itemblock.scss'
 import { useDispatch, useSelector } from 'react-redux'
 import { addPizzaAction, clearPizzaAction } from './redux/reducers/pizzasInCartReducer'
-import { changePizzaCost } from './redux/reducers/pizzaCostReducer'
+import { changePizzaCost, dropPizzaCost } from './redux/reducers/pizzaCostReducer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash, faCartShopping } from '@fortawesome/free-solid-svg-icons'
 
@@ -36,8 +36,8 @@ const Itemblock = ({ id, name, imageUrl, types, sizes, price, startprice }) => {
     }
     return pizzasCost
   })
-
-  //pizza types states
+  
+   //pizza types states
   const [activeType, setActiveType] = useState(types[0])
   const [activeSize, setActiveSize] = useState(0)
 
@@ -53,12 +53,13 @@ const Itemblock = ({ id, name, imageUrl, types, sizes, price, startprice }) => {
   const addPizza = (id) => {
     dispatch(addPizzaAction({ pizza_id: id, pizza_amount: 1 }))
     let currentCost = price + (Math.round(price * sizeTypes[activeSize] / 100))
-    dispatch(changePizzaCost({ pizza_id: id, pizza_cost: currentCost}))
+    dispatch(changePizzaCost({ pizza_id: id, pizza_type: activeType, pizza_cost: currentCost}))
   }
 
   //removing all pizzas
   const removeAllPizzas = (id) => {
     dispatch(clearPizzaAction({ pizza_id: id, pizza_amount: 0 }))
+    dispatch(dropPizzaCost(({ pizza_id: id, pizza_type: activeType, pizza_cost: 0})))
   }
 
   return (
