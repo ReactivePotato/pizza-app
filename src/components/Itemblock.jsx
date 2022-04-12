@@ -63,11 +63,11 @@ const Itemblock = ({ id, name, imageUrl, types, sizes, price, startprice }) => {
   }
 
   return (
-    <div className='pizza_card'>
+    <div className='pizza___card'>
       <div className='pizza_img'><img src={imageUrl} alt="" /></div>
       <div className='pizza_card_text'>{name}</div>
       <div className='pizza_start_price'>от {startprice} ₽. </div>
-      <div className='pizza_params'>
+      <div className='pizza__params'>
         <div className='pizza_type_group'>
           {pizzaTypes.map((type, index) => <div
             key={type}
@@ -92,7 +92,7 @@ const Itemblock = ({ id, name, imageUrl, types, sizes, price, startprice }) => {
             {size} см.</div>)}
         </div>}
       </div>
-      <div className='price_buy_block'>
+      <div className='price__buy__block'>
         <div className='pizza_price'>
           {pizzasCost} ₽.
         </div>

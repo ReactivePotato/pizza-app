@@ -1,7 +1,8 @@
 $font_fam: 'Raleway',
 sans-serif;
 
-.pizza_card {
+//pizza card styles
+.pizza___card {
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -25,45 +26,19 @@ sans-serif;
     margin-bottom: 10px;
   }
 
-  .pizza_params {
+  //size and params
+  .pizza__params {
     background-color: #F3F3F3;
     border-radius: 7px;
     width: 280px;
     height: 85px;
-  }
 
-  .pizza_type_group {
-    display: flex;
-    text-align: center;
+    //pizza params
+    .pizza_type_group {
+      display: flex;
+      text-align: center;
 
-    .pizza_type {
-      border-radius: 7px;
-      text-transform: lowercase;
-      width: 50%;
-      font-size: 14px;
-      font-weight: 600;
-      margin-top: 5px;
-      margin-left: 4px;
-      margin-right: 4px;
-      margin-bottom: 1px;
-      padding-top: 7px;
-      padding-bottom: 9px;
-      transition: all .1s linear;
-
-      &:hover {
-        cursor: pointer;
-        background-color: #cecece;
-        color: #2f2f2f;
-      }
-
-      &.disabled {
-        opacity: 0.1;
-        pointer-events: none;
-      }
-
-      &.active {
-        background-color: #ffffff;
-        color: #2f2f2f;
+      .pizza_type {
         border-radius: 7px;
         text-transform: lowercase;
         width: 50%;
@@ -76,41 +51,44 @@ sans-serif;
         padding-top: 7px;
         padding-bottom: 9px;
         transition: all .1s linear;
+
+        &:hover {
+          cursor: pointer;
+          background-color: #cecece;
+          color: #2f2f2f;
+        }
+
+        &.disabled {
+          opacity: 0.1;
+          pointer-events: none;
+        }
+
+        &.active {
+          background-color: #ffffff;
+          color: #2f2f2f;
+          border-radius: 7px;
+          text-transform: lowercase;
+          width: 50%;
+          font-size: 14px;
+          font-weight: 600;
+          margin-top: 5px;
+          margin-left: 4px;
+          margin-right: 4px;
+          margin-bottom: 1px;
+          padding-top: 7px;
+          padding-bottom: 9px;
+          transition: all .1s linear;
+        }
       }
     }
-  }
 
-  .size_type_group {
-    display: flex;
-    text-align: center;
+    //pizza size
+    .size_type_group {
+      display: flex;
+      text-align: center;
 
-    .size_type {
-      border-radius: 5px;
-      text-transform: lowercase;
-      width: 35%;
-      font-size: 14px;
-      font-weight: 600;
-      margin-top: 4px;
-      margin-left: 4px;
-      margin-right: 4px;
-      padding-top: 7px;
-      padding-bottom: 9px;
-      transition: all .1s linear;
-
-      &:hover {
-        background-color: #cecece;
-        cursor: pointer;
-      }
-
-      &.disabled {
-        opacity: 0.1;
-        pointer-events: none;
-      }
-
-      &.active {
-        background-color: #ffffff;
-        color: #2f2f2f;
-        border-radius: 7px;
+      .size_type {
+        border-radius: 5px;
         text-transform: lowercase;
         width: 35%;
         font-size: 14px;
@@ -121,123 +99,150 @@ sans-serif;
         padding-top: 7px;
         padding-bottom: 9px;
         transition: all .1s linear;
+
+        &:hover {
+          background-color: #cecece;
+          cursor: pointer;
+        }
+
+        &.disabled {
+          opacity: 0.1;
+          pointer-events: none;
+        }
+
+        &.active {
+          background-color: #ffffff;
+          color: #2f2f2f;
+          border-radius: 7px;
+          text-transform: lowercase;
+          width: 35%;
+          font-size: 14px;
+          font-weight: 600;
+          margin-top: 4px;
+          margin-left: 4px;
+          margin-right: 4px;
+          padding-top: 7px;
+          padding-bottom: 9px;
+          transition: all .1s linear;
+        }
+      }
+    }
+  }
+
+  .pizza_img>img {
+    width: 260px;
+    margin-left: 17px;
+  }
+
+  // pizza price and buy button
+  .price__buy__block {
+    display: flex;
+    margin-left: 7px;
+    margin-top: 20px;
+    margin-right: 1px;
+
+    .pizza_price {
+      display: flex;
+      justify-content: flex-start;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .pizza_buy_button {
+      position: absolute;
+      margin-left: 7.8em;
+      margin-top: -10px;
+      margin-right: 8px;
+      justify-content: flex-end;
+      padding: 10px;
+      width: 8.1em;
+      height: 1.5em;
+      background-color: #ffffff;
+      border: solid 1px #fdb633;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all .1s linear;
+      user-select: none;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #ff641c;
+        color: #ffffff;
+        transition: all .1s linear;
+      }
+
+      &:active {
+        background-color: #692a0c;
+      }
+
+      .buy_button_text {
+        position: absolute;
+        margin-right: 32px;
+      }
+
+      .buy_button_cart_img {
+        position: absolute;
+        margin-left: 5.7em;
+        height: 1em;
+
+        .svg-inline--fa {
+          height: 1.5em;
+          z-index: -1;
+        }
       }
     }
 
-  }
-}
-
-.pizza_img>img {
-  width: 260px;
-  margin-left: 17px;
-}
-
-.price_buy_block {
-  display: flex;
-  margin-left: 7px;
-  margin-top: 20px;
-  margin-right: 1px;
-}
-
-.pizza_price {
-  display: flex;
-  justify-content: flex-start;
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.pizza_buy_button {
-  position: absolute;
-  margin-left: 7.8em;
-  margin-top: -10px;
-  margin-right: 8px;
-  justify-content: flex-end;
-  padding: 10px;
-  width: 8.1em;
-  height: 1.5em;
-  background-color: #ffffff;
-  border: solid 1px #fdb633;
-  border-radius: 50px;
-  font-size: 14px;
-  font-weight: 600;
-  transition: all .1s linear;
-  user-select: none;
-
-  &:hover {
-    cursor: pointer;
-    background-color: #ff641c;
-    color: #ffffff;
-    transition: all .1s linear;
-  }
-  
-  &:active {
-    background-color: #692a0c;
-  }
-
-  .buy_button_text {
-    position: absolute;
-    margin-right: 32px;
-  }
-
-  .buy_button_cart_img {
-    position: absolute;
-    margin-left: 5.7em;
-    height: 1em;
-    
-    .svg-inline--fa{
-      height: 1.5em;
-      z-index: -1;
+    .buy_button_amount_bg {
+      position: absolute;
+      width: 17px;
+      height: 17px;
+      background-color: #ff641c;
+      border: solid white 1px;
+      border-radius: 50px;
+      margin-left: 6.7em;
+      margin-top: .65em;
     }
 
-  }
+    .buy_button_amount {
+      color: #ffffff;
+      font-size: 12px;
 
-  .buy_button_amount_bg {
-    position: absolute;
-    width: 17px;
-    height: 17px;
-    background-color: #ff641c;
-    border: solid white 1px;
-    border-radius: 50px;
-    margin-left: 6.7em;
-    margin-top: .65em;
-  }
-
-  .buy_button_amount {
-    color: #ffffff;
-    font-size: 12px;
-
-    &.hidden {
-      display: none;
+      &.hidden {
+        display: none;
+      }
     }
   }
-}
-.pizza_clear_button {
-  position: absolute;
-  margin-left: 15.6em;
-  flex-direction: row;
 
-  .svg-inline--fa{
-    margin-top: 1px;
-    height: 1.1em;
-  }
+  .pizza_clear_button {
+    position: absolute;
+    margin-left: 15.6em;
+    flex-direction: row;
 
-  &:hover{
-    cursor: pointer;
-    z-index: 1;
-  }
-}
+    .svg-inline--fa {
+      margin-top: 1px;
+      height: 1.1em;
+    }
 
-.trash-bin {
-  position: absolute;
-  margin-left: .2em;
-  transition: all .1s ease;
-  user-select: none;
-  &:hover {
-    transform: scale(1.3);
-    color: #ff641c
-  }
+    &:hover {
+      cursor: pointer;
+      z-index: 1;
+    }
 
-  &:active{
-    transform: rotate(30deg)
+    .trash-bin {
+      position: absolute;
+      margin-left: .2em;
+      transition: all .1s ease;
+      user-select: none;
+
+      &:hover {
+        transform: scale(1.3);
+        color: #ff641c
+      }
+
+      &:active {
+        transform: rotate(30deg)
+      }
+    }
   }
 }
