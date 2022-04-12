@@ -16,10 +16,10 @@ const MainContent = () => {
 
   return (
     <>
-      <div className='main-text'>
+      <div className='main__text'>
         <h2>Все пиццы</h2>
       </div>
-      <div className='main-content'>
+      <div className='main__content'>
         {pizzas.map((pizza) => <Itemblock key={pizza.id} {...pizza}/>)}
       </div>
     </>
