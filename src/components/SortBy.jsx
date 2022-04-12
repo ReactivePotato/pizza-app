@@ -8,7 +8,7 @@ const SortBy = () => {
 	}
 
 	return (
-		<div className='sort_type_select'>
+		<div className='sort__type__select'>
 			<div className='sort_type_label'>сортировать по</div>
 			<div className='sort_type_selector'>
 				<select className='type_selector' onChange={() => onSelectSortType()}>

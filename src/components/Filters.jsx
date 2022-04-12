@@ -13,7 +13,7 @@ const Filters = () => {
   }
 
   return (
-    <div className='filters_group'>
+    <div className='filters__group'>
       {pizzaFilter.map((filter, index) => {
         return (
           <div
@@ -24,7 +24,7 @@ const Filters = () => {
           </div>
         )
       })}
-      <div className='filters_sort'>
+      <div className='filters__sort'>
         <SortBy />
       </div>
     </div>
