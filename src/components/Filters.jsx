@@ -1,8 +1,13 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { changePizzaCategory } from './redux/reducers/pizzaFilterReducer'
 import '../styles/Filters.scss'
 import SortBy from './SortBy'
 
+
 const Filters = () => {
+
+  const dispatch = useDispatch()
 
   const pizzaFilter = ['Все', 'Мясные', 'Гриль', 'Вегетарианские', 'Острые', 'Закрытые']
 
@@ -10,6 +15,11 @@ const Filters = () => {
 
   const onSelectFilter = (index) => {
     setPizzaFill(index)
+    selectPizzaCategory(index)
+  }
+
+  const selectPizzaCategory = (id) => {
+    dispatch(changePizzaCategory({ 'category_id': id }))
   }
 
   return (
