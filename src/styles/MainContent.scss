@@ -1,11 +1,13 @@
 .main__text {
-	display: flex;
-	margin-left: 2%;
+	position: absolute;
+	margin-left: 1.2em;
+	margin-top: 10em;
 	user-select: none;
 }
 
 .main__content {
 	display: flex;
+	margin-top: 5em;
 	flex-direction: row;
 	flex-wrap: wrap;
 }

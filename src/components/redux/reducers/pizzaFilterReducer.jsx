@@ -1,4 +1,4 @@
-const initialState = []
+const initialState = {category_id: 0}
 
 const USE_FILTER = 'USE_FILTER'
 
