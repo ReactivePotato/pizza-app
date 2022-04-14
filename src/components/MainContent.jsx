@@ -8,6 +8,7 @@ const MainContent = () => {
   const pizzaFilter = ['Все', 'Мясные', 'гриль', 'Вегетарианские', 'Острые', 'Закрытые']
 
   const currentCategory = useSelector((it) => it.pizzaFilterReducer.category_id)
+  const currentSortType = useSelector((it) => it.sortingType.sort_type)
 
   const [pizzas, setPizzas] = useState([])
 
@@ -15,9 +16,15 @@ const MainContent = () => {
     fetch('http://localhost:3000/db.json')
     .then((data) => data.json())
     .then((json) => {
+      if (currentSortType === 'name') {
+        json.pizzas.sort((a, b) => a.name > b.name ? 1 : -1)
+      }
+      if (currentSortType === 'price') {
+        json.pizzas.sort((a, b) => a.startprice > b.startprice ? 1 : -1)
+      }
       setPizzas(json.pizzas)
     });
-  }, [])
+  }, [currentSortType])
 
   return (
     <>
