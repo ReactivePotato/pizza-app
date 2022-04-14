@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { SocialIcon } from 'react-social-icons'
+import { FaInstagram, FaTelegram, FaVk, FaWhatsapp } from 'react-icons/fa'
 import '../styles/Footer.scss'
 
 const Footer = () => {
@@ -24,10 +24,10 @@ const Footer = () => {
       </div>
       <div className='footer_right_col'>
       <ul>
-          <li><SocialIcon url="https://instagram.com" style={{width: 30, height: 30 }}/></li>
-          <li><SocialIcon url="https://vk.com"/></li>
-          <li><SocialIcon url="https://whatsapp.com"/></li>
-          <li><SocialIcon url="https://telegram.com"/></li>
+          <li><a href='https://instagram.com/'><FaInstagram /></a></li>
+          <li><a href='https://vk.com/'><FaVk /></a></li>
+          <li><a href='https://whatsapp.com/'><FaWhatsapp /></a></li>
+          <li><a href='https://telegram.com/'><FaTelegram /></a></li>
         </ul>
       </div>
     </div>
