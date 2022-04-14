@@ -9,7 +9,7 @@ const Filters = () => {
 
   const dispatch = useDispatch()
 
-  const pizzaFilter = ['Все', 'Мясные', 'Гриль', 'Вегетарианские', 'Острые', 'Закрытые']
+  const pizzaFilter = ['Все', 'Мясные', 'Гриль', 'Вегетарианские', 'Острые', 'Сырные']
 
   const [pizzaFill, setPizzaFill] = useState(0)
 

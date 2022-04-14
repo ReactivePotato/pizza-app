@@ -1,13 +1,13 @@
 .main__text {
-	position: absolute;
+	position: flex;
 	margin-left: 1.2em;
-	margin-top: 10em;
+	margin-top: 1em;
 	user-select: none;
 }
 
 .main__content {
 	display: flex;
-	margin-top: 5em;
+	margin-top: 1em;
 	flex-direction: row;
 	flex-wrap: wrap;
 }
