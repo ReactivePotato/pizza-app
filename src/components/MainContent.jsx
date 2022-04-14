@@ -22,9 +22,10 @@ const MainContent = () => {
       if (currentSortType === 'price') {
         json.pizzas.sort((a, b) => a.startprice > b.startprice ? 1 : -1)
       }
-      setPizzas(json.pizzas)
+      const categorizedPizzas = currentCategory !== 0 ? json.pizzas.filter((pizzas) => pizzas.category === currentCategory) : json.pizzas 
+      setPizzas(categorizedPizzas)
     });
-  }, [currentSortType])
+  }, [currentCategory, currentSortType])
 
   return (
     <>
