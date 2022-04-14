@@ -1,4 +1,4 @@
-.footer {
+.footer___block {
 	display: flex;
 	flex-direction: row;
 	background-color: #e2e2e2;
@@ -10,69 +10,112 @@
 	border-radius: 7px;
 	padding-top: 1em;
 	max-height: 160px;
+	min-height: 160px;
+	min-width: 500px;
 
-	.footer_left_col {
-
-		ul>li {
-			list-style-type: none;
-			padding-bottom: .5em;
-
-			a {
-				text-decoration: none;
-				color: #303030;
-				transition: all .2s linear;
-
-				&:hover {
-					color: #ff641c;
-					text-decoration: underline;
-					transition: all .2s linear;
-				}
-			}
-		}
-	}
-
-	.footer_mid_col {
-
-
-		ul>li {
-			list-style-type: none;
-
-			a {
-				text-decoration: none;
-				color: #303030;
-				transition: all .2s linear;
-
-				&:hover {
-					color: #ff641c;
-					text-decoration: underline;
-					transition: all .2s linear;
-				}
-			}
-		}
-	}
-
-	.footer_right_col {
+	.footer__text {
 		display: flex;
+		margin: auto;
 
-		ul>li {
-			list-style-type: none;
+		.footer_left_col {
 
+			ul>li {
+				list-style-type: none;
+				padding-bottom: .5em;
+				margin-left: -40px;
 
-			.svg {
-				color: red;
-			}
-
-			a {
-				text-decoration: none;
-				color: #303030;
-				transition: all .2s linear;
-
-				&:hover {
-					color: #ff641c;
-					text-decoration: underline;
+				a {
+					text-decoration: none;
+					color: #303030;
 					transition: all .2s linear;
+
+					&:hover {
+						color: #ff641c;
+						text-decoration: underline;
+						transition: all .2s linear;
+					}
 				}
 			}
+		}
+
+		.footer_mid_col {
+
+			ul>li {
+				list-style-type: none;
+				padding-bottom: .5em;
+				margin-left: 2em;
+
+				a {
+					text-decoration: none;
+					color: #303030;
+					transition: all .2s linear;
+
+					&:hover {
+						color: #ff641c;
+						text-decoration: underline;
+						transition: all .2s linear;
+					}
+				}
+			}
+		}
+
+		.footer_right_col {
+			margin-top: .1em;
+
+			ul>li {
+				list-style-type: none;
+				padding-bottom: .3em;
+				margin-left: 1.5em;
+				
+				.social-insta{
+					width: 20px;
+					height: 20px;
+					color: #8c38bc;
+					transition: all .5s linear;
+
+					&:hover {
+						color: #ff641c;
+						transform: rotate(360deg);
+					}
+				}
+
+				.social-vk{
+					width: 20px;
+					height: 20px;
+					color: #0076fe;
+					transition: all .5s linear;
+
+					&:hover {
+						color: #ff641c;
+						transform: rotate(360deg);
+					}
+				}
+
+				.social-wa{
+					width: 20px;
+					height: 20px;
+					color: #0cbe42;
+					transition: all .5s linear;
+
+					&:hover {
+						color: #ff641c;
+						transform: rotate(360deg);
+					}
+				}
+
+				.social-tg{
+					width: 20px;
+					height: 20px;
+					color: #2997ce;
+					transition: all .5s linear;
+
+					&:hover {
+						color: #ff641c;
+						transform: rotate(360deg);
+					}
+				}
+			}
+			
 		}
 	}
 }
