@@ -5,7 +5,7 @@ import Itemblock from './Itemblock'
 
 const MainContent = () => {
   
-  const pizzaFilter = ['Все', 'Мясные', 'гриль', 'Вегетарианские', 'Острые', 'Закрытые']
+  const pizzaFilter = ['Все', 'Мясные', 'гриль', 'Вегетарианские', 'Острые', 'Сырные']
 
   const currentCategory = useSelector((it) => it.pizzaFilterReducer.category_id)
   const currentSortType = useSelector((it) => it.sortingType.sort_type)
