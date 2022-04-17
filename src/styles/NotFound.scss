@@ -1,0 +1,47 @@
+$font_fam: 'Raleway',
+sans-serif;
+
+.not__found__block {
+    font-size: 8em;
+    font-family: $font_fam;
+    font-weight: 600;
+    color: #ff702d;
+    padding: 1em;
+    min-height: 700px;
+
+    .not_found_error {
+        font-size: .7em;
+        color: #303030;
+    }
+
+    .not_fount_text_block {
+        margin-top: 3em;
+        font-size: .16em;
+        color: #303030;
+    }
+
+.svg-inline--fa {
+    font-size: 0.7em;
+    color: #ff702d;
+    animation: 3s infinite linear;
+    animation-name: transformIn;
+}
+
+@keyframes transformIn {
+    from {
+        transform: rotate(5deg)
+    }
+
+    50% {
+        transform: rotate(-5deg);
+        transform: scale(1.2)
+    }
+
+    to {
+        transform: rotate(5deg);
+    }
+
+
+}
+
+}
