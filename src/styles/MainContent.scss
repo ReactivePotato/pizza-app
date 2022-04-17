@@ -1,6 +1,6 @@
 .main__text {
 	position: flex;
-	margin-left: 1.2em;
+	margin: auto;
 	margin-top: 1em;
 	user-select: none;
 }
@@ -10,4 +10,5 @@
 	margin-top: 1em;
 	flex-direction: row;
 	flex-wrap: wrap;
+	margin: auto;
 }
