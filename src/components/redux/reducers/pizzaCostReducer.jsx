@@ -20,14 +20,11 @@ const pizzasCost = (state = initialState, action) => {
         case DROP_PIZZA_COST: {
             const foundedPizza = state.find((pizza) => pizza.pizza_id === action.payload.pizza_id)
             if (typeof foundedPizza !== 'undefined') {
-                return state.map((pizza) => {
-                    if (pizza.pizza_id === action.payload.pizza_id) {
-                        return { ...pizza, pizza_type: action.payload.pizza_type, pizza_cost: action.payload.pizza_cost }
-                    }
-                    return pizza
+                return state.filter((pizza) => {
+                    return pizza.pizza_id !== action.payload.pizza_id
                 })
             }
-            return [...state, action.payload]
+            return state
         }
         default:
             return state
