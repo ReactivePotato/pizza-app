@@ -1,8 +1,12 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 const Cart = () => {
-  return (
-    <div>Cart</div>
+  const pizzasInCart = useSelector((it) => it.pizzasInCartReducer)
+  return(
+    pizzasInCart.map((it) => {
+      return it.pizza_id
+    })
   )
 }
 
