@@ -5,7 +5,7 @@ const Cart = () => {
   const pizzasInCart = useSelector((it) => it.pizzasInCartReducer)
   return(
     pizzasInCart.map((it) => {
-      return it.pizza_id
+      return <div>{it.pizza_id} - {it.pizza_amount}</div>
     })
   )
 }
